@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- AUTH -->
+<div id="authScreen" class="screen">
+  <h2>💬 Simple Chat</h2>
+
+  <div id="authMenu">
+    <button onclick="showLogin()">Login</button>
+    <button onclick="showRegister()">Daftar</button>
+  </div>
+
+  <div id="loginForm" class="hide">
+    <input id="loginId" placeholder="ID">
+    <input id="loginPass" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="loginError" class="error"></p>
+  </div>
+
+  <div id="registerForm" class="hide">
+    <input id="regId" placeholder="ID">
+    <input id="regPass" type="password" placeholder="Password">
+    <small>⚠ Jangan sampai lupa password ya 🙂</small>
+    <button onclick="register()">Daftar</button>
+    <p id="regError" class="error"></p>
+  </div>
+</div>
+
+<!-- INBOX -->
+<div id="inboxScreen" class="screen hide">
+  <header class="topbar">
+    <h3>Inbox</h3>
+  </header>
+
+  <div id="inboxList" class="content"></div>
+
+  <button class="fab" onclick="openNewChat()">＋</button>
+</div>
+
+<!-- CHAT -->
+<div id="chatScreen" class="screen hide">
+  <header class="topbar chatbar">
+    <button class="backBtn" onclick="backInbox()">←</button>
+    <div class="avatar">👤</div>
+    <span id="chatTitle"></span>
+  </header>
+
+  <div id="chatMessages" class="chatContent"></div>
+
+  <div class="inputBar">
+    <input id="messageInput" placeholder="Tulis pesan...">
+    <button onclick="sendMessage()">➤</button>
+  </div>
+</div>
+
+<!-- BOTTOM SHEET -->
+<div id="newChatSheet" class="sheet hide">
+  <div class="sheet-content">
+    <div class="sheet-handle"></div>
+    <h3>💬 Chat Baru</h3>
+
+    <div class="input-wrap">
+      <span>👤</span>
+      <input id="targetId" placeholder="Masukkan ID tujuan">
+    </div>
+
+    <button onclick="startChat()">Mulai Chat</button>
+  </div>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

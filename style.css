@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+
+body {
+  background: #020617;
+  color: white;
+}
+
+.hide {
+  display: none !important;
+}
+
+.screen {
+  min-height: 100vh;
+}
+
+/* TOP BAR */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: #020617;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  border-bottom: 1px solid #1e293b;
+  z-index: 10;
+}
+
+.topbar h3 {
+  margin: auto;
+}
+
+.chatbar {
+  gap: 10px;
+}
+
+.backBtn {
+  width: 40px;
+  height: 40px;
+  background: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+/* AVATAR */
+.avatar {
+  width: 36px;
+  height: 36px;
+  background: #1e293b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* CONTENT */
+.content {
+  padding: 70px 15px 80px;
+}
+
+.chatContent {
+  padding: 70px 15px 90px;
+}
+
+/* AUTH */
+.screen h2 {
+  margin: 40px 0;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: white;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #22c55e;
+  font-weight: bold;
+}
+
+.error {
+  color: #f87171;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* INBOX ITEM */
+.inbox-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.inbox-item .avatar {
+  flex-shrink: 0;
+}
+
+/* CHAT */
+.msg {
+  max-width: 75%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 12px;
+}
+
+.me {
+  background: #22c55e;
+  color: black;
+  margin-left: auto;
+}
+
+.other {
+  background: #1e293b;
+}
+
+/* INPUT */
+.inputBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 10px;
+  background: #020617;
+  border-top: 1px solid #1e293b;
+}
+
+.inputBar input {
+  flex: 1;
+}
+
+.inputBar button {
+  width: 60px;
+}
+
+/* FAB */
+.fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-size: 26px;
+}
+
+/* BOTTOM SHEET */
+.sheet {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  align-items: flex-end;
+  z-index: 99;
+}
+
+.sheet-content {
+  width: 100%;
+  background: #020617;
+  padding: 20px;
+  border-radius: 18px 18px 0 0;
+}
+
+.sheet-handle {
+  width: 40px;
+  height: 4px;
+  background: #334155;
+  border-radius: 10px;
+  margin: 0 auto 10px;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #1e293b;
+  padding: 12px;
+  border-radius: 12px;
+}
